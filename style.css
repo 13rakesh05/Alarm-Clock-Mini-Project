@@ -1,0 +1,189 @@
+/* ------- General Styling ------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*--- Body and Alarm box -> display as a flex  */
+body,
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---- Body ----- */
+body {
+    padding: 0 10px;
+    min-height: 100vh;
+    background: #4A98F7;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* ------ Alarm Container ------- */
+.container {
+    width: 36%;
+    min-width: 400px;
+    padding: 2em 3em 3em;
+    background-color: #fff;
+    border-radius: 0.5em;
+    flex-direction: column;
+    margin: 2em;
+    overflow: hidden;
+}
+.container:hover {
+    box-shadow: 0 0 5em #fff;
+}
+/* -----Alarm image ------- */
+.container img {
+    max-width: 10em;
+}
+
+/* -----Alarm heading ------ */
+h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: 'Roboto Slab', serif;
+    color: #0f62fb
+}
+/* ----- Current Time ------ */
+.container h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0.4em auto;
+    color: #274274;
+}
+
+/* ------------Watch Face------------- */
+.time {
+    width: 80%;
+    text-align: center;
+    padding: 5px 5px;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    font-family: 'Press Start 2P', cursive;
+    transition: all 0.5s;
+    margin-bottom: 1em;
+}
+
+.time:hover {
+    background-color: #56a1fd;
+    border-radius: 0.7em;
+    color: #fff;
+    box-shadow: 0 0 30px #2E94E3;
+}
+
+.dtDisplay {
+    background-color: #56a1fd;
+    border-radius: 1em;
+    box-shadow: 0 0 2em #2E94E3;
+}
+
+/* -----------Set-Alarm------------------- */
+.container .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content .disable {
+    cursor: no-drop;
+}
+
+.content .column {
+    padding: 0 1em;
+    border-radius: 0.3em;
+    border: 1px solid #bfbfbf;
+    width: calc(100% / 3 - 5px);
+}
+.column:hover {
+    box-shadow: 0 0 0.5em #3879f1;
+    ;
+}
+
+.content .disable .column {
+    opacity: 0.6;
+    pointer-events: none;
+}
+.column select {
+    width: 100%;
+    height: 2.5em;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.3rem;
+    color: #274274;
+    border-bottom: 2px solid #274274;
+}
+
+
+/* ----- Set Alarm Button ---- */
+.container #setAlarmBtn {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0.2em;
+    font-size: 1.8rem;
+    padding: 0.3em 0em;
+    margin-top: 1em;
+    background: #4999f5;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container #setAlarmBtn:hover {
+    background: #0a0;
+    box-shadow: 0 0 0.5em #0a0;
+}
+
+/* ---- Stop Alarm Button------ */
+#stopAlarm {
+    visibility: hidden;
+    width: 40%;
+    border: none;
+    outline: none;
+    border-radius: 0.3em;
+    font-size: 1.3rem;
+    padding: 0.2em 0em;
+    margin-top: 1em;
+    background: #4999f5;
+    color: #fff;
+    cursor: pointer;
+
+}
+/* ------- Delete Alarm Text --------- */
+.btn-delete {
+    margin: 0.2em 0em;
+    border: none;
+    outline: none;
+    border-radius: 0.3em;
+    font-size: 1rem;
+    color: #fff;
+    background: #4A98F7;
+    padding: 0.2em;
+}
+
+#stopAlarm:hover,
+.btn-delete:hover {
+    cursor: pointer;
+    background: #f40;
+    box-shadow: 0 0 2em #f40;
+}
+
+/* ------- Alarm Text ------- */
+.alarmText {
+    width: fit-content;
+    color: #274274;
+    display: grid;
+    font-size: 1.3rem;
+    grid-template-columns: 8fr 2fr 2fr;
+    gap: 0.5em;
+    align-items: center;
+    border-bottom: 2px solid #999e9e;
+    margin-top: 0.3em;
+}
